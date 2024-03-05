@@ -6,7 +6,7 @@ public class Boj16204 {
 
         int N; //카드 개수
         int M; // 앞면에 O가 적힌 카드 개수
-        int K; // O개수
+        int K; // 뒷면O개수
         int O;
         int X;
         int front_X; // 카드 앞 x개수

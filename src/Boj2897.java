@@ -7,11 +7,11 @@ public class Boj2897 {
         String str = sc.nextLine();
         String[] strings = str.split(" ");
 
-        int r = Integer.parseInt(strings[0]);
-        int c = Integer.parseInt(strings[1]);
-        int result[] = new int[5];
+        int r = Integer.parseInt(strings[0]); // 행
+        int c = Integer.parseInt(strings[1]); // 열
+        int result[] = new int[5]; //결과 값 배열
 
-        char[][] array = new char[r][c];
+        char[][] array = new char[r][c]; // 2차원 배열로 행과 열 입력 받아서 할당
 
         for(int i = 0; i < r; i++){
             String line = sc.nextLine();
