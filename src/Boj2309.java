@@ -9,7 +9,6 @@ public class Boj2309 {
         for(int i = 0; i < 9; i++){
             tall[i] = sc.nextInt();
         }
-        Arrays.sort(tall);
 
         for(int i = 0; i < 9; i++){
             res += tall[i];
