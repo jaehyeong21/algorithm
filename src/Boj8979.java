@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+//Compartor compare(객체, 객체)
+
+//Comparable compareTo(객체)
+
+
 class Medal implements Comparable<Medal> {
     int num;
     int gold;
