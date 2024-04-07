@@ -20,8 +20,8 @@ public class Boj1449 {
         int coveredRange = 0; // 현재까지 테이프로 막은 구간의 끝 위치를 저장할 변수
 
         for (int i = 0; i < N; i++) {
-            if (coveredRange < locations[i]) { // 현재 위치가 이전까지 테이프로 막은 구간의 끝보다 멀리 있을 경우
-                coveredRange = locations[i] + L - 1;
+            if (coveredRange < locations[i]) { // 구멍이 1이고 테이프 길이가 2면 1 + 2 = 3 테이프는 1부터2까지 막아짐
+                coveredRange = locations[i] + L - 1; //1을 빼는 이유
                 count++;
             }
         }
