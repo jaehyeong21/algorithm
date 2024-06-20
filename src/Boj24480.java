@@ -1,10 +1,9 @@
 import java.io.BufferedReader;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Boj24479 {
+public class Boj24480 {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 입력을 받기 위한 BufferedReader
     static StringTokenizer st; // 입력된 문자열을 공백 기준으로 나누기 위한 StringTokenizer
@@ -23,7 +22,7 @@ public class Boj24479 {
         int startVertex = Integer.parseInt(st.nextToken()); // 시작 정점을 입력받음
 
         // 방문한 정점을 기록할 배열을 정점의 개수 + 1 크기로 생성 (1부터 사용)
-        check = new int[vertex + 1]; //1부터 세기 때문임
+        check = new int[vertex + 1];
 
         // 그래프의 각 정점을 위한 리스트 초기화
         for (int i = 0; i < vertex + 1; i++) {
@@ -41,9 +40,9 @@ public class Boj24479 {
             graph.get(toVertex).add(fromVertex);
         }
 
-        // 각 정점의 인접 리스트를 오름차순으로 정렬
+        // 각 정점의 인접 리스트를 내림차순으로 정렬
         for (int i = 1; i < graph.size(); i++) {
-            Collections.sort(graph.get(i));
+            graph.get(i).sort(Comparator.reverseOrder());
         }
 
         // DFS 방문 순서를 기록할 count 초기화
