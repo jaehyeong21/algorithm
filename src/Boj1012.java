@@ -11,7 +11,6 @@ public class Boj1012 {
     public static int[] dx = {0, 0, -1, 1};
     public static int[] dy = {-1, 1, 0, 0};
 
-    // DFS 메소드
     public static void dfs(int x, int y) {
         visited[x][y] = true;
 
@@ -62,7 +61,5 @@ public class Boj1012 {
 
             System.out.println(Count);
         }
-
-        sc.close();
     }
 }
