@@ -1,9 +1,12 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
-public class Boj24444 {
+public class Boj24444try {
     public static int vertex, edge, start;
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
     public static StringTokenizer st;
@@ -28,20 +31,14 @@ public class Boj24444 {
 
         for(int i = 0; i < edge; i++){
             st = new StringTokenizer(br.readLine());
-            int u = Integer.parseInt(st.nextToken());
-            int v = Integer.parseInt(st.nextToken());
-            graph.get(u).add(v);
-            graph.get(v).add(u);
-        }
-
-        // 그래프 인접 리스트 정렬
-        for(int i = 1; i <= vertex; i++){
-            Collections.sort(graph.get(i));
+            int start = Integer.parseInt(st.nextToken());
+            int end = Integer.parseInt(st.nextToken());
+            graph.get(start).add(end);
+            graph.get(end).add(start);
         }
 
         bfs(start);
 
-        // 각 정점의 방문 순서 출력
         for(int i = 1; i <= vertex; i++){
             System.out.println(order[i]);
         }
@@ -54,7 +51,7 @@ public class Boj24444 {
         order[start] = ++count;
 
         while(!queue.isEmpty()){
-            int node = queue.poll();
+            int node = queue.poll(); // 정점 하나 꺼냄
             for(int next : graph.get(node)){
                 if(!visited[next]){
                     queue.offer(next);
