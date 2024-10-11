@@ -70,8 +70,5 @@ public class Boj1012_1 {
             bw.flush(); //버퍼비우기
             t--;
         }
-
-        bw.close();
-        br.close();
     }
 }
