@@ -34,7 +34,5 @@ public class Boj11000 {
         }
 
         System.out.println(pq.size());
-
-        
     }
 }
