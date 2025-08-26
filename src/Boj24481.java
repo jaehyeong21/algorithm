@@ -6,12 +6,13 @@ import java.util.*;
 public class Boj24481 {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static StringTokenizer st;
-    static StringBuilder sb = new StringBuilder();
+
 
     static ArrayList<ArrayList<Integer>> graph;
     static int[] depth;
     static boolean[] visited;
+    static StringTokenizer st;
+    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
 
